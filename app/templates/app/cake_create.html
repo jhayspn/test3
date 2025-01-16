@@ -1,0 +1,13 @@
+{% extends 'app/base.html' %}
+{% load static %}  
+{% block content %}    
+    <h1>New Cake</h1>
+    <form action="{% url 'cake_create' %}" method="post">
+        {% csrf_token%}
+        {{form.as_p}}
+        <input type="submit" value="Save">
+
+    </form>
+
+
+ {% endblock content %}
