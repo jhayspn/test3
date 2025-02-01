@@ -1,0 +1,53 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="cartorderpage">
+    <h1>Your Cart</h1>
+    
+    {% if cart_posts %}
+    <table>
+        <thead>
+            <tr>
+                <th>Cake</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for post_id, post in cart_posts.items %}
+            <tr>
+                <td>{{ post.name }}</td>
+                <td>₱{{ post.price|floatformat:2 }}</td>
+                <td>{{ post.quantity }}</td>
+                <td>₱{{ post.sub_total|floatformat:2 }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="cart_total">
+        <p>Total Price: ₱{{ total_price|floatformat:2 }}</p>
+    </div>
+    <div class="information">
+    <h2>Information</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="firstname" placeholder="First Name" required>
+        <input type="text" name="lastname" placeholder="Last Name" required>
+        <input type="text" name="address" placeholder="Address" required>
+        <input type="text" name="contact" placeholder="Contact Number" required>
+        <button type="submit">Place Order</button>
+    </form>
+    <a href="{% url 'cake' %}">Back</a>
+    </div>
+    {% else %}
+    <div class="cart_empty">
+        <h2>Your cart is empty</h2>
+        <a href="{% url 'cake' %}" style="text-decoration: none;">
+            <button type="button">Cake List</button>
+        </a>
+    </div>
+    {% endif %}
+</div>
+{% endblock content %}

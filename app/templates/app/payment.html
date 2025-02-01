@@ -1,0 +1,43 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="paymentpage">
+    <h1>Checkout</h1>
+    <div class="paymenttable">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for post in order_posts %}
+                <tr>
+                    <td>{{ post.post_id }}</td>
+                    <td>{{ post.post.name }}</td>
+                    <td>{{ post.quantity }}</td>
+                    <td>₱{{ post.sub_total|floatformat:2 }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <p class="paymenttotal"><span>Total Price: </span>{{ total_price|floatformat:2 }}</p>
+    </div>
+</div>
+<div class="paymentdetail">
+    <form action="{% url 'process_order' %}" method="POST">
+        {% csrf_token %}
+        <label>Name: </label>
+            <p>{{ order.firstname }} {{ order.lastname }}</p>
+        <label>Address: </label>
+            <p>{{ order.address }}</p>
+        <label>Contact: </label>
+            <p>{{ order.contact }}</p>
+        <button type="submit">Place Order</button>
+    </form>
+</div>
+{% endblock content %}

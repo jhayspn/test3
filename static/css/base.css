@@ -1,5 +1,5 @@
 h1 {
-    color: white;
+    color: rgb(14, 10, 10);
 }
 
 
@@ -76,5 +76,294 @@ nav a:nth-child(5):hover~.animation {
     width: 120px; 
     left: 470px;
     background: color #e67e22; 
+
 }
-  
+
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+    .container img {
+
+    width: 20%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid rgb(233, 239, 245)
+    
+    }
+
+.basepage{
+    position: fixed;
+    display: flex;
+    top: 20px;
+    left: 50px;
+}
+.basepage p{
+    font-family: monospace;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+.basepage a{
+    position: absolute;
+    top: 45px;
+    width: 50px;
+    padding: 5px 10px;
+    color: whitesmoke;
+    border: 1px solid #d837b0;
+    background-color: #d837b0;
+    border-radius: 20px;
+    text-decoration: none;
+}
+.cakepage{
+    position: relative;
+    top: 50px;
+    left: 12px;
+    padding: 5px 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    text-decoration: none;
+    border-left: 1px solid #d837b0;
+    border-bottom: 1px solid #d837b0;
+    border-right: 1px solid #d837b0;
+}
+.cake{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 70px 80px;
+    margin: 10px auto;
+    justify-content: center;
+    overflow: hidden;
+}
+.cake .cake_product{
+    position: relative;
+    flex: 1 1 calc(25% - 2rem);
+    max-width: 18.5rem;
+    max-height: 25rem;
+    border-left: 2px solid #d837b0;
+    border-bottom: 2px solid #d837b0;
+    border-right: 2px solid #d837b0;
+    box-sizing: border-box;
+    border-radius: 3rem;
+    overflow: hidden;
+}
+.cake .cake_product .cake_image{
+    position: relative;
+    text-align: center;
+    padding: 1rem 1rem;
+    max-width: 240px;
+    overflow: hidden;
+}
+.cake .cake_product .cake_image img{
+    width: 100%;
+    max-height: 16rem;
+    object-fit: cover;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropbtn {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: black;
+    top: -140%;
+    margin-left: 3px;
+    padding: 3px 7px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.dropdown-content {
+    margin-top: -70px;
+    display: none; 
+    position: absolute; 
+    background-color: #f9f9f9; 
+    min-width: 160px; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+    z-index: 1; 
+}
+.dropdown-content a {
+    color: black; 
+    padding: 12px 16px; 
+    text-decoration: none; 
+    display: block; 
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+    display: block; 
+}
+.dropdown:hover .dropbtn {
+    background-color: transparent; 
+}
+.cake_content{
+    text-align: center
+}
+.cake_content p{
+    font-size: 1.2rem;
+    color: #333;
+}
+.cake_cart{
+    position: absolute;
+    display: flex;
+    bottom: 1rem;
+    left: 1rem;
+}
+.icon_cart{
+    border: 1px solid #d837b0;
+    background-color: transparent;
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+}
+.cake_price{
+    margin-left: 10rem;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.cartorderpage{
+    
+}
+.cartorderpage table{
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+}
+.cartorderpage table thead tr th{
+    padding: 0.3rem 2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+.cartorderpage table tbody tr td{
+    text-align: center;
+}
+.cartorderpage table tbody tr td form input{
+    width: 3rem;
+    padding: 1px 3px;
+}
+.cart_total{
+    position: relative;
+    display: block;
+    justify-content: space-between;
+    top: 1rem;
+}
+.cart_empty{
+    position: relative;
+    text-align: center;
+}
+.cart_empty a button{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: white;
+    width: 230px;
+    background-color: #d837b0;
+    border: 1px solid #d837b0;
+    padding: 12px 16px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 10px; 
+    left: 42%;
+}
+.information{
+    position: relative;
+    top: 100px;
+}
+.information form input{
+    position: relative;
+    margin-bottom: 15px;
+    padding: 12px 50px;
+    border: 1px solid #d837b0;
+    border-radius: 30px;
+}
+.information form button{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: white;
+    width: 230px;
+    background-color: #d837b0;
+    border: 1px solid #d837b0;
+    padding: 12px 16px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 10px; 
+    left: 570px;
+}
+.information a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: black;
+    width: 200px;
+    border: 2px solid #d837b0;
+    padding: 12px 16px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px;
+    top: -50px;
+    left: 250px;
+}
+.paymentpage table{
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+}
+.paymentpage table thead tr th{
+    padding: 0.3rem 2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+.paymentpage table tbody tr td{
+    text-align: center;
+}
+.paymentdetail{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100px;
+    top: 120px;
+    left: 67%;
+    padding: 55px 160px;
+}
+.paymentdetail form label{
+    position: relative;
+    display: block;
+    font-weight: bold;
+    font-size: 1.4rem;
+    left: -40px;
+    margin-bottom: 20px;
+}
+.paymentdetail form button{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: white;
+    width: 230px;
+    background-color: #d837b0;
+    border: 1px solid #d837b0;
+    padding: 12px 16px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 10px; 
+    top: 30px;
+}

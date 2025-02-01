@@ -6,8 +6,8 @@
         {% csrf_token%}
         <p> Are you sure you want to delete" {{post.title}}"?</p>
         <input type="submit" value="Confrim">
-
     </form>
+    <a href="{% url 'cake' %}">Back</a>
 
 
  {% endblock content %}

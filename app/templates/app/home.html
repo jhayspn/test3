@@ -1,18 +1,41 @@
 {% extends 'app/base.html' %}
 {% load static %}  
 {% block content %}
-<style>
-    .mylogo{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        
 
-    }
 
 </style>
  <h1>Sweet Dyeiz Cakes and Cupcakes</h1> 
- <img class="mylogo" src="{% static 'images/logo.png' %}">
+ <!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device">
+
+<link rel="stylesheet" href="style.css" />
+
+<title>Image Gallery</title>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<img class="mylogo" src="{% static 'images/cakee1.png' %}">
+<img class="mylogo" src="{% static 'images/cakee2.png' %}">
+<img class="mylogo" src="{% static 'images/cakee3.png' %}">
+<img class="mylogo" src="{% static 'images/cakee4.png' %}">
+<img class="mylogo" src="{% static 'images/cakee5.png' %}">
+
+
+</div>
+
+</body>
+
  {% endblock content %}
 
 
